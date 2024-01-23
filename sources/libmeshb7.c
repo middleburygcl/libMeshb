@@ -263,6 +263,7 @@ const char *GmfKwdFmt[ GmfMaxKwd + 1 ][3] =
    {"Tetrahedra",                               "i", "iiiii"},
    {"Prisms",                                   "i", "iiiiiii"},
    {"Hexahedra",                                "i", "iiiiiiiii"},
+   {"Pentatopes",                               "i", "iiiiii"},
    {"Reserved",                                 "",  ""},
    {"Reserved",                                 "",  ""},
    {"Corners",                                  "i", "i"},
@@ -677,7 +678,7 @@ int64_t GmfOpenMesh(const char *FilNam, int mod, ...)
          safe_fscanf(msh->hdl, "%d", &msh->dim, msh->err);
       }
 
-      if( (msh->dim != 2) && (msh->dim != 3) )
+      if( (msh->dim != 2) && (msh->dim != 3) && (msh->dim != 4) )
          longjmp(msh->err, -17);
 
       (*PtrVer) = msh->ver;
@@ -720,7 +721,7 @@ int64_t GmfOpenMesh(const char *FilNam, int mod, ...)
       if( (msh->ver >= 3) && (sizeof(int64_t) != 8) )
          longjmp(msh->err, -19);
 
-      if( (msh->dim != 2) && (msh->dim != 3) )
+      if( (msh->dim != 2) && (msh->dim != 3) && (msh->dim != 4) )
          longjmp(msh->err, -20);
 
       // Set default real numbers size
