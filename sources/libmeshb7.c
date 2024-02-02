@@ -263,7 +263,6 @@ const char *GmfKwdFmt[ GmfMaxKwd + 1 ][3] =
    {"Tetrahedra",                               "i", "iiiii"},
    {"Prisms",                                   "i", "iiiiiii"},
    {"Hexahedra",                                "i", "iiiiiiiii"},
-   {"Pentatopes",                               "i", "iiiiii"},
    {"Reserved",                                 "",  ""},
    {"Reserved",                                 "",  ""},
    {"Corners",                                  "i", "i"},
@@ -471,6 +470,7 @@ const char *GmfKwdFmt[ GmfMaxKwd + 1 ][3] =
    {"PyramidsGID",                              "i", "iii"},
    {"PrismsGID",                                "i", "iii"},
    {"HexahedraGID",                             "i", "iii"},
+   {"Pentatopes",                               "i", "iiiiii"},
 };
 
 #ifdef TRANSMESH

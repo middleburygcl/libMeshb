@@ -61,7 +61,6 @@ enum GmfKwdCod
    GmfTetrahedra,
    GmfPrisms,
    GmfHexahedra,
-   GmfPentatopes,
    GmfReserved3,
    GmfReserved4,
    GmfCorners,
@@ -269,6 +268,7 @@ enum GmfKwdCod
    GmfPyramidsGID,
    GmfPrismsGID,
    GmfHexahedraGID,
+   GmfPentatopes,
    GmfLastKeyword
 };
 
